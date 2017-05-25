@@ -11,17 +11,23 @@
 </template>
 
 <script>
-
+import Store from './store'
 
 export default {
   name: 'app',
   data: function () {
     return {
-      title:'this is todo list',
-      items: [
-        
-      ],
+      title:'this is todo a list',
+      items: Store.fetch(),
       newItem: ''
+    }
+  },
+  watch: {
+    items: {
+      handler: function(items) {
+        Store.save(items)
+      },
+      deep: true
     }
   },
   methods: {
