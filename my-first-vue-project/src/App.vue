@@ -56,6 +56,7 @@ export default {
   margin-top: 60px;
 }
 .finished {
-  text-decoration: underline;
+  text-decoration: line-through;
+  color: rgb(65, 184, 131);
 }
 </style>
